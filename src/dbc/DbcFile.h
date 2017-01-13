@@ -32,6 +32,11 @@ class DbcFile
 		uint32 SaveToFile();
 		void PrintTable();
 		void CreateStructures();
+		// DataReaders
+		uint32 GetUInt32(int offs);
+		int32 GetInt32(int offs);
+		float GetFloat(int offs);
+		std::string GetString(int offs); // steps 1 - load int offs from table, 2 - get text from String_Block
 		// variables
 		std::string path;
 		uint32 filesize;
